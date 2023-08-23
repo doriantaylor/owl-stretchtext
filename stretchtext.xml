@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/transform"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:dct="http://purl.org/dc/terms/"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+      xmlns:bibo="http://purl.org/ontology/bibo/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:vann="http://purl.org/vocab/vann/"
+      xmlns:acrt="https://vocab.methodandstructure.com/certification#"
+      prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# xsd: http://www.w3.org/2001/XMLSchema# owl: http://www.w3.org/2002/07/owl# dct: http://purl.org/dc/terms/ skos: http://www.w3.org/2004/02/skos/core# bibo: http://purl.org/ontology/bibo/ foaf: http://xmlns.com/foaf/0.1/ vann: http://purl.org/vocab/vann/ acrt: https://vocab.methodandstructure.com/certification#"
+      vocab="http://www.w3.org/1999/xhtml/vocab#"
+      xml:lang="en">
+  <head>
+    <title about="#" property="dct:title">A Stretchtext Vocabulary</title>
+    <base href="https://vocab.methodandstructure.com/stretchtext"/>
+    <meta about="#" property="vann:preferredNamespacePrefix" content="stv"/>
+    <link about="#" rel="rdfs:isDefinedBy bibo:uri" href="#"/>
+  </head>
+  <body typeof="bibo:Webpage">
+    <div about="#" typeof="owl:Ontology">
+      <dl>
+        <dt>Author</dt>
+        <dd><a rel="external dct:creator" href="http://doriantaylor.com/person/dorian-taylor#me"><span property="foaf:name">Dorian Taylor</span></a></dd>
+        <dt>Created</dt>
+        <dd property="dct:created" datatype="xsd:dateTime" content="2023-08-23T19:38:14Z">August 23, 2023</dd>
+        <!--<dt>Updated</dt>
+        <dd property="2012-12-12T16:04:50-0800">December 12, 2012</dd>-->
+        <dt>Namespace URI</dt>
+        <dd><a href="#">https://vocab.methodandstructure.com/stretchtext#</a></dd>
+        <dt>Preferred Namespace Prefix</dt>
+        <dd about="#" property="vann:preferredNamespacePrefix">stv</dd>
+      </dl>
+      <p property="rdfs:comment dct:description"></p>
+    </div>
+    <section>
+      <h2>Classes</h2>
+      <p>At this time, there is only the single class, <a href="#StretchText"><code>StretchText</code></a>.</p>
+      <section id="StretchText" about="[stv:StretchText]" typeof="owl:Class">
+        <h3 property="rdfs:label"><code>StretchText</code></h3>
+        <p property="rdfs:comment">This </p>
+        <dl>
+          <!--<dt>Subclass of:</dt>
+          <dd><a rel="external rdfs:subClassOf" href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></dd>
+          <dt>Disjoint with:</dt>
+          <dd><a rel="owl:disjointWith" href="#Position">ibis:Position</a></dd>
+          <dd><a rel="owl:disjointWith" href="#Argument">ibis:Argument</a></dd>
+          -->
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </section>
+    </section>
+    <section>
+      <h2>Properties</h2>
+      <section id="initial" about="[stv:initial]" typeof="owl:ObjectProperty">
+        <h3 property="rdfs:label"><code>initial</code></h3>
+        <p property="rdfs:comment">This property identifies the initial.</p>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#StretchText"><code>stv:StretchText</code></a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </section>
+    </section>
+    <!--
+    <section>
+      <h2>References</h2>
+      <ul>
+      </ul>
+    </section>-->
+  </body>
+</html>
