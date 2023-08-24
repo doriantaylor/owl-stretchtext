@@ -34,14 +34,14 @@
         <dt>Preferred Namespace Prefix</dt>
         <dd about="#" property="vann:preferredNamespacePrefix">stv</dd>
       </dl>
-      <p property="rdfs:comment dct:description"></p>
+      <p><span property="rdfs:comment dct:description">This document is an attempt to define a reasonably robust and portable description of stretchtext.</span> <a property="dct:references" href="https://en.wikipedia.org/wiki/StretchText">Stretchtext</a> is a relatively little-used hypermedia technique for managing levels of <em>detail</em>. Successive levels of detail in a text can be recursively hidden under lower-detail text, subject to user activation. </p>
     </div>
     <section>
       <h2>Classes</h2>
       <p>At this time, there is only the single class, <a href="#StretchText"><code>StretchText</code></a>.</p>
       <section id="StretchText" about="[stv:StretchText]" typeof="owl:Class">
         <h3 property="rdfs:label"><code>StretchText</code></h3>
-        <p property="rdfs:comment">This </p>
+        <p property="rdfs:comment">This class represents an addressable unit of stretchtext.</p>
         <dl>
           <!--<dt>Subclass of:</dt>
           <dd><a rel="external rdfs:subClassOf" href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></dd>
@@ -49,15 +49,49 @@
           <dd><a rel="owl:disjointWith" href="#Position">ibis:Position</a></dd>
           <dd><a rel="owl:disjointWith" href="#Argument">ibis:Argument</a></dd>
           -->
+          <dt>Properties:</dt>
+          <dd><a rev="rdfs:domain" href="#initial"><code>initial</code></a></dd>
+          <dd><a rev="rdfs:domain" href="#replace-with"><code>replace-with</code></a></dd>
+          <dd><a rev="rdfs:domain" href="#append"><code>append</code></a></dd>
+          <dd><a rev="rdfs:domain" href="#prepend"><code>prepend</code></a></dd>
         </dl>
         <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
       </section>
     </section>
     <section>
       <h2>Properties</h2>
-      <section id="initial" about="[stv:initial]" typeof="owl:ObjectProperty">
+      <section id="initial" about="[stv:initial]" typeof="owl:ObjectProperty owl:FunctionalProperty">
         <h3 property="rdfs:label"><code>initial</code></h3>
-        <p property="rdfs:comment">This property identifies the initial.</p>
+        <p property="rdfs:comment">This property denotes the initial value of a run of stretchtext.</p>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#StretchText"><code>stv:StretchText</code></a></dd>
+          <dt>Cardinality:</dt>
+          <dd property="owl:cardinality" datatype="xsd:integer">1</dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </section>
+      <section id="replace-with" about="[stv:replace-with]" typeof="owl:ObjectProperty">
+        <h3 property="rdfs:label"><code>replace-with</code></h3>
+        <p property="rdfs:comment">When the subject stretchtext is activated, replace the initial value with the object.</p>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#StretchText"><code>stv:StretchText</code></a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </section>
+      <section id="append" about="[stv:append]" typeof="owl:ObjectProperty">
+        <h3 property="rdfs:label"><code>append</code></h3>
+        <p property="rdfs:comment">When the subject stretchtext is activated, put the object <em>after</em> the initial value (or its replacement).</p>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#StretchText"><code>stv:StretchText</code></a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </section>
+      <section id="prepend" about="[stv:prepend]" typeof="owl:ObjectProperty">
+        <h3 property="rdfs:label"><code>prepend</code></h3>
+        <p property="rdfs:comment">When the subject stretchtext is activated, put the object <em>before</em> the initial value (or its replacement).</p>
         <dl>
           <dt>Domain:</dt>
           <dd><a rel="rdfs:domain" href="#StretchText"><code>stv:StretchText</code></a></dd>

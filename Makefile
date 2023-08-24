@@ -5,7 +5,7 @@ RAPPER = rapper
 DOT    = dot
 PANDOC = pandoc
 RSYNC  = rsync
-ME     = certification
+ME     = stretchtext
 SITE   = doriantaylor.com:ms/vocab/
 
 target: variants readme # dot
