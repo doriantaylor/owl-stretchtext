@@ -1,18 +1,18 @@
-<div about="#" typeof="owl:Ontology">
+<div rel="foaf:primaryTopic" resource="#" typeof="owl:Ontology">
 
 Author  
 <a href="http://doriantaylor.com/person/dorian-taylor#me"
-rel="external dct:creator"><span property="foaf:name">Dorian
+rel="dct:creator" typeof="foaf:Person"><span property="foaf:name">Dorian
 Taylor</span></a>
 
 Created  
 August 23, 2023
 
 Namespace URI  
-<https://vocab.methodandstructure.com/stretchtext#>
+[`https://vocab.methodandstructure.com/stretchtext#`](https://vocab.methodandstructure.com/stretchtext#)
 
 Preferred Namespace Prefix  
-stv
+`stv`
 
 <span property="rdfs:comment dct:description">This document is an
 attempt to define a reasonably robust and portable description of
@@ -21,6 +21,9 @@ property="dct:references">Stretchtext</a> is a relatively little-used
 hypermedia technique for managing levels of *detail*. Successive levels
 of detail in a text can be recursively hidden under lower-detail text,
 subject to user activation.
+
+![Demonstration of now-defunct stretchtext site,
+[`telescopictext.com`](https://web.archive.org/web/20080831005247/http://telescopictext.com/).](https://vocab.methodandstructure.com/telescopictext.gif)
 
 </div>
 
@@ -82,7 +85,7 @@ rel="rdfs:isDefinedBy">Back to Top</a>
 </div>
 
 <div id="replace-with" class="section" about="[stv:replace-with]"
-typeof="owl:ObjectProperty">
+typeof="owl:ObjectProperty owl:FunctionalProperty">
 
 ### `replace-with`
 
@@ -92,6 +95,9 @@ with the object.
 Domain:  
 <a href="https://vocab.methodandstructure.com/stretchtext#StretchText"
 rel="rdfs:domain"><code>stv:StretchText</code></a>
+
+Maximum Cardinality:  
+1
 
 <a href="https://vocab.methodandstructure.com/stretchtext#"
 rel="rdfs:isDefinedBy">Back to Top</a>

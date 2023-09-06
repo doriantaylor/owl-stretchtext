@@ -10,8 +10,8 @@
       xmlns:bibo="http://purl.org/ontology/bibo/"
       xmlns:foaf="http://xmlns.com/foaf/0.1/"
       xmlns:vann="http://purl.org/vocab/vann/"
-      xmlns:acrt="https://vocab.methodandstructure.com/certification#"
-      prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# xsd: http://www.w3.org/2001/XMLSchema# owl: http://www.w3.org/2002/07/owl# dct: http://purl.org/dc/terms/ skos: http://www.w3.org/2004/02/skos/core# bibo: http://purl.org/ontology/bibo/ foaf: http://xmlns.com/foaf/0.1/ vann: http://purl.org/vocab/vann/ acrt: https://vocab.methodandstructure.com/certification#"
+      xmlns:stv="https://vocab.methodandstructure.com/stretchtext#"
+      prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# xsd: http://www.w3.org/2001/XMLSchema# owl: http://www.w3.org/2002/07/owl# dct: http://purl.org/dc/terms/ skos: http://www.w3.org/2004/02/skos/core# bibo: http://purl.org/ontology/bibo/ foaf: http://xmlns.com/foaf/0.1/ vann: http://purl.org/vocab/vann/ stv: https://vocab.methodandstructure.com/stretchtext#"
       vocab="http://www.w3.org/1999/xhtml/vocab#"
       xml:lang="en">
   <head>
@@ -21,20 +21,26 @@
     <link about="#" rel="rdfs:isDefinedBy bibo:uri" href="#"/>
   </head>
   <body typeof="bibo:Webpage">
-    <div about="#" typeof="owl:Ontology">
+    <div rel="foaf:primaryTopic" resource="#" typeof="owl:Ontology">
       <dl>
         <dt>Author</dt>
-        <dd><a rel="external dct:creator" href="http://doriantaylor.com/person/dorian-taylor#me"><span property="foaf:name">Dorian Taylor</span></a></dd>
+        <dd><a rel="dct:creator" href="http://doriantaylor.com/person/dorian-taylor#me" typeof="foaf:Person"><span property="foaf:name">Dorian Taylor</span></a></dd>
         <dt>Created</dt>
         <dd property="dct:created" datatype="xsd:dateTime" content="2023-08-23T19:38:14Z">August 23, 2023</dd>
         <!--<dt>Updated</dt>
         <dd property="2012-12-12T16:04:50-0800">December 12, 2012</dd>-->
         <dt>Namespace URI</dt>
-        <dd><a href="#">https://vocab.methodandstructure.com/stretchtext#</a></dd>
+        <dd><a href="#"><code>https://vocab.methodandstructure.com/stretchtext#</code></a></dd>
         <dt>Preferred Namespace Prefix</dt>
-        <dd about="#" property="vann:preferredNamespacePrefix">stv</dd>
+        <dd><code about="#" property="vann:preferredNamespacePrefix">stv</code></dd>
       </dl>
       <p><span property="rdfs:comment dct:description">This document is an attempt to define a reasonably robust and portable description of stretchtext.</span> <a property="dct:references" href="https://en.wikipedia.org/wiki/StretchText">Stretchtext</a> is a relatively little-used hypermedia technique for managing levels of <em>detail</em>. Successive levels of detail in a text can be recursively hidden under lower-detail text, subject to user activation. </p>
+      <figure>
+        <img src="telescopictext.gif" alt="screen recording of telescopictext.com"/>
+        <figcaption>
+          <p>Demonstration of now-defunct stretchtext site, <a href="https://web.archive.org/web/20080831005247/http://telescopictext.com/"><code>telescopictext.com</code></a>.</p>
+        </figcaption>
+      </figure>
     </div>
     <section>
       <h2>Classes</h2>
@@ -71,12 +77,14 @@
         </dl>
         <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
       </section>
-      <section id="replace-with" about="[stv:replace-with]" typeof="owl:ObjectProperty">
+      <section id="replace-with" about="[stv:replace-with]" typeof="owl:ObjectProperty owl:FunctionalProperty">
         <h3 property="rdfs:label"><code>replace-with</code></h3>
         <p property="rdfs:comment">When the subject stretchtext is activated, replace the initial value with the object.</p>
         <dl>
           <dt>Domain:</dt>
           <dd><a rel="rdfs:domain" href="#StretchText"><code>stv:StretchText</code></a></dd>
+          <dt>Maximum Cardinality:</dt>
+          <dd property="owl:maxCardinality" datatype="xsd:integer">1</dd>
         </dl>
         <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
       </section>
